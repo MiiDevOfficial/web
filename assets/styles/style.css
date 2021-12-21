@@ -1,0 +1,70 @@
+html, body {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    background-color: #242322;
+    margin: 0;
+    padding: 0%;
+    height: 100%;
+    text-align: center;
+    color: white !important;
+    font-family: 'Raleway', sans-serif !important;
+}
+
+.center-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    scroll-snap-align: center;
+}
+#text h1 {
+    font-size: 64px !important; 
+    font-weight: 800 !important;
+    margin: 0;
+}
+/* blinking in scripts/main.js */
+#text h2 {
+    margin: 0;
+    font-size: 16px !important; 
+    font-weight: 200 !important;
+    visibility: hidden;
+    animation-fill-mode: both;
+}
+
+/* Animations from https://www.w3schools.com/w3css/4/w3.css */
+.animate-top {
+    position:relative;
+    animation:animatetop 0.4s
+}
+@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+
+.animate-opacity-7s {
+    animation: opac 7s
+}
+@keyframes opac {from{opacity:0} to{opacity:1}}
+
+.animate-blinking {
+    animation: fade 3s infinite;
+}
+@keyframes fade {
+    from { visibility: visible; opacity: 0; }
+    50% { opacity: 1; }
+    to { opacity: 0; }
+}       
+
+
+.rest-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    scroll-snap-align: center;
+    justify-content: center;
+}
+
+#choose-lang img {
+    width: 50px;
+}
