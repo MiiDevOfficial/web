@@ -12,8 +12,6 @@
             "scrollAskDelay": "5" // How many seconds to wait before asking to scroll down
         }
     </script>
-    <script src="assets/scripts/main.js"></script>
-    
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,15 +24,18 @@
         <div id ="text">
           <h1 class="animate-top">MiiDev</h1>
           <h2 id="scroll-down">Please scroll down...</h2>
+          <script src="assets/scripts/scrollAskDelay.js"></script>
         </div>
     </div>
     <div class="rest-div" id="choose-lang">
         <p class="animate-blinking">First, please choose a language.</p>
-        <img src="assets/images/pl.png">
-        <img src="assets/images/en.png">
+        <script src="assets/scripts/lang.js"></script>
+        <img src="assets/images/pl.png" onclick="self.lang('pl')">
+        <img src="assets/images/en.png" onclick="self.lang('en')">
+        <img src="assets/images/es.png" onclick="self.lang('es')">
     </div>
-    <div class="rest-div">
-        <p class="animate-blinking" id="welcome">Welcome to our page!</p>
+    <div class="rest-div" id="welcome">
+        <p class="animate-blinking">Welcome to our page!</p>
     </div>
 </body>
 </html>

@@ -68,3 +68,7 @@ html, body {
 #choose-lang img {
     width: 50px;
 }
+
+#welcome {
+    display: none;
+}
