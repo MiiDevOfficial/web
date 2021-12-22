@@ -1,16 +1,3 @@
-const langs = {
-    welcome: {
-        "pl": "Witamy na naszej stronie!",
-        "en": "Welcome to our page!",
-        "es": "¡Bienvenidos a nuestro sitio!"
-    },
-    start: {
-        "pl": "Rozpocznij",
-        "en": "Start",
-        "es": "Comienzo"
-    }
-}
-
 function lang(language) {
     const welcome = document.getElementById('welcome');
     const welcomeText = document.querySelector("#welcome p");
