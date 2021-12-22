@@ -66,12 +66,16 @@ html, body {
 }
 
 #choose-lang {
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
 
-#choose-lang img {
+#flags {
+    flex-direction: row;
+}
+
+#flags img {
     width: 50px;
+    padding: 5px;
 }
 
 #welcome {
