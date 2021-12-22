@@ -65,6 +65,11 @@ html, body {
     justify-content: center;
 }
 
+#choose-lang {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 #choose-lang img {
     width: 50px;
 }
