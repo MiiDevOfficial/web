@@ -25,4 +25,4 @@ function getLang() {
       }
     }
     return false;
-  }
+}
