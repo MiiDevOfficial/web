@@ -1,5 +1,5 @@
 function lang(language) {
-    document.cookie = `lang=${language}; Secure`;
+    if(storageAvailable('localStorage')) localStorage.setItem("lang", language);
     const welcome = document.getElementById('welcome');
     const welcomeText = document.querySelector("#welcome p");
     const startButton = document.querySelector("#welcome button")
@@ -10,19 +10,27 @@ function lang(language) {
     welcome.scrollIntoView();
 }
 
-function getLang() {
-    let cname = "lang";
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
+function storageAvailable(type) {
+    var storage;
+    try {
+        storage = window[type];
+        var x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return true;
     }
-    return false;
+    catch(e) {
+        return e instanceof DOMException && (
+            // everything except Firefox
+            e.code === 22 ||
+            // Firefox
+            e.code === 1014 ||
+            // test name field too, because code might not be present
+            // everything except Firefox
+            e.name === 'QuotaExceededError' ||
+            // Firefox
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // acknowledge QuotaExceededError only if there's something already stored
+            (storage && storage.length !== 0);
+    }
 }
