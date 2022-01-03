@@ -6,5 +6,5 @@ if (storageAvailable('localStorage') && localStorage.lang) {
     welcome.style.animation = "opac 2s"
     welcomeText.innerHTML = langs.welcome[localStorage.lang] || langs.welcome["en"];
     startButton.innerHTML = langs.start[localStorage.lang] || langs.start["en"];
-    welcome.scrollIntoView();
+    welcome.scrollIntoView(true);
 }

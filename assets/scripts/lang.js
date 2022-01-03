@@ -7,9 +7,10 @@ function lang(language) {
     welcome.style.animation = "opac 2s"
     welcomeText.innerHTML = langs.welcome[language] || langs.welcome["en"];
     startButton.innerHTML = langs.start[language] || langs.start["en"];
-    welcome.scrollIntoView();
+    welcome.scrollIntoView(true);
 }
 
+// MDN Web Docss
 function storageAvailable(type) {
     var storage;
     try {
