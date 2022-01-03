@@ -1,5 +1,5 @@
 setTimeout(() => {
-    const scroll =  document.getElementById("scroll-down");
+    const scroll = document.getElementById("scroll-down");
     scroll.style.animation = "fade 3s infinite";
-    }, config.scrollAskDelay * 1000
+}, config.scrollAskDelay * 1000
 );

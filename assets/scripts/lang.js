@@ -1,5 +1,5 @@
 function lang(language) {
-    if(storageAvailable('localStorage')) localStorage.setItem("lang", language);
+    if (storageAvailable('localStorage')) localStorage.setItem("lang", language);
     const welcome = document.getElementById('welcome');
     const welcomeText = document.querySelector("#welcome p");
     const startButton = document.querySelector("#welcome button")
@@ -20,7 +20,7 @@ function storageAvailable(type) {
         storage.removeItem(x);
         return true;
     }
-    catch(e) {
+    catch (e) {
         return e instanceof DOMException && (
             // everything except Firefox
             e.code === 22 ||
